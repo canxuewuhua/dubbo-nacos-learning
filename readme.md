@@ -183,6 +183,8 @@ register 向指定注册中心注册 多个注册中心ID用逗号分割  如果
 
 生成动态代理方式  可选  jdk/javassist
 
+提交到github
+
 
 
 
