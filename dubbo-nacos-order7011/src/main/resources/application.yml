@@ -1,0 +1,19 @@
+server:
+  port: 7011
+  servlet:
+    context-path: /api
+
+spring:
+  application:
+    name: dubbo-nacos-order
+dubbo:
+  application:
+    name: order-app
+  protocol:
+    name: dubbo
+    port: 20880
+  registry:
+    address: nacos://192.168.0.101:8848
+  scan:
+    base-packages: com.huolieniao.service
+

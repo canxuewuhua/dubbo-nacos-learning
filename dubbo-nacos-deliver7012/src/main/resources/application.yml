@@ -1,0 +1,17 @@
+server:
+  port: 7012
+  servlet:
+    context-path: /api
+
+spring:
+  application:
+    name: dubbo-nacos-deliver
+dubbo:
+  application:
+    name: deliver-app
+  protocol:
+    name: dubbo
+    port: 20880
+  registry:
+    address: nacos://192.168.0.101:8848
+
