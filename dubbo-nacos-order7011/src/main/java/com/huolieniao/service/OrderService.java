@@ -5,7 +5,9 @@ import org.springframework.stereotype.Component;
 
 // @DubboService 有token属性配置 令牌验证
 @Component
-@DubboService(version = "1.0.0", group = "order-create")
+@DubboService(version = "1.0.0", group = "order-create", filter = "dubboContextFilter")
+//@DubboService(version = "1.0.0", group = "order-create")
+//@DubboService(version = "1.0.0", group = "order-create")
 public class OrderService implements OrderDubboService{
 
     @Override

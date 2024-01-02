@@ -1,5 +1,6 @@
 package com.huolieniao.service.impl;
 
+import com.huolieniao.handler.GlobalHandler;
 import com.huolieniao.service.DeliverService;
 import com.huolieniao.service.OrderDubboService;
 import org.apache.dubbo.config.annotation.DubboReference;
@@ -20,7 +21,8 @@ public class DeliverServiceImpl implements DeliverService {
      * 本地存根是 接口名+Stub
      * 本地伪装是 接口名+Mock
      */
-    @DubboReference(version = "1.0.0", group = "storage-order", stub = "true", mock = "force:return xyz")
+//    @DubboReference(version = "1.0.0", group = "order-create", stub = "false", mock = "force:return xyz")
+    @DubboReference(version = "1.0.0", group = "order-create")
     public OrderDubboService orderDubboService;
 
     /**
@@ -39,6 +41,7 @@ public class DeliverServiceImpl implements DeliverService {
 
     public String orderCreateByBelow(String openId){
         System.out.println("orderCreateByBelow");
+        GlobalHandler.setRequestId();
         String msg = orderDubboService.orderCreate(openId);
         return msg;
     }

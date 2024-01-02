@@ -185,6 +185,11 @@ register 向指定注册中心注册 多个注册中心ID用逗号分割  如果
 
 提交到github20231029
 
+# 注意alibaba还是apache会有影响
+# com.alibaba.dubbo.rpc.Filter
+# dubboContextFilter=com.huolieniao.filter.DubboContextFilter
+
+# META-INF.dubbo
 
 
 

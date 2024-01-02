@@ -9,11 +9,13 @@ spring:
 dubbo:
   application:
     name: order-app
+    qos-enable: false
   protocol:
     name: dubbo
     port: 20880
   registry:
-    address: nacos://192.168.0.101:8848
-  scan:
-    base-packages: com.huolieniao.service
+    address: nacos://121.36.105.55:8848
+  consumer:
+    check: false
+    retries: 2
 
